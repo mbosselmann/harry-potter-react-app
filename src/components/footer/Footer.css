@@ -1,0 +1,19 @@
+footer {
+  width: 100%;
+}
+
+#house-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #252525;
+  width: 100%;
+}
+
+.nav-button {
+  border: 5px solid #fff;
+  background-color: #303030;
+  color: #fff;
+  height: 60px;
+  width: 25%;
+}

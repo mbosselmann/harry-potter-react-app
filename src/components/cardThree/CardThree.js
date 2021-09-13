@@ -1,7 +1,7 @@
-import "./Card.css";
+import "./CardThree.css";
 import expandMore from "./expand-more.png";
 
-function Card() {
+function CardThree() {
   const characterName = "Harry Potter ";
   const actorName = "(Daniel Radcliffe)";
   const gender = "male";
@@ -48,4 +48,4 @@ function Card() {
   );
 }
 
-export default Card;
+export default CardThree;
