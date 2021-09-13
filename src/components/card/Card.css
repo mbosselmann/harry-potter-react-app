@@ -1,0 +1,65 @@
+.section-card {
+  background-color: #202020;
+  margin: 15px;
+  border-radius: 5px;
+}
+
+.section-header {
+  background-color: #252525;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-header-title {
+  padding: 10px 50px 10px 30px;
+  font-size: 1rem;
+  align-self: center;
+}
+
+.expand-more-button {
+  background-color: #303030;
+  border: none;
+  border-radius: 0 5px 5px 0;
+}
+
+.expand-less-button {
+  background-color: #481a1c;
+  border: none;
+  border-radius: 0 5px 0 0;
+}
+
+.expand-more-img {
+  padding: 4px 0 0 0;
+}
+
+.section-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  object-position: 0px 0%;
+  border-radius: 5px 0 0 0;
+}
+
+.section-content {
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 1;
+}
+
+.section-content--hidden {
+  display: none;
+}
+
+.main-info-list,
+.wand-list {
+  list-style-type: none;
+  padding: 15px;
+  width: 50%;
+  font-size: 0.8rem;
+}
+
+.wand-list h3,
+.main-info-list h3 {
+  margin: 0 0 10px 0;
+}

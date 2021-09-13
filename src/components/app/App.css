@@ -1,0 +1,58 @@
+HTML {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* main,
+aside,
+footer,
+div,
+p,
+img {
+  border: solid 2px white;
+} */
+
+/* names for CSS grid */
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+}
+
+body {
+  /* display: grid;
+  grid-template-areas:
+    "header header header"
+    "aside aside aside"
+    "main main main";
+  grid-auto-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 1fr;
+  min-height: 100vh; */
+  background-color: #161616;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+}
+
+svg {
+  color: #fff;
+}
+
+/* @media screen and (min-width: 500px) {
+  main {
+    width: 500px;
+    position: relative;
+    margin: 0 auto;
+  }
+} */
