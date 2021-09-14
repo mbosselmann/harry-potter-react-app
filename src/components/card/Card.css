@@ -12,9 +12,45 @@
 }
 
 .section-header-title {
-  padding: 10px 50px 10px 30px;
+  padding: 10px 20px 10px 30px;
   font-size: 1rem;
   align-self: center;
+}
+
+.gryffindor {
+  background-color: #55171b;
+  padding: 10px;
+  align-self: center;
+  border-radius: 5px;
+  margin-right: 5px;
+  font-size: 0.8rem;
+}
+
+.ravenclaw {
+  background-color: #1a3956;
+  padding: 10px;
+  align-self: center;
+  border-radius: 5px;
+  margin-right: 5px;
+  font-size: 0.8rem;
+}
+
+.hufflepuff {
+  background-color: #d88304;
+  padding: 10px;
+  align-self: center;
+  border-radius: 5px;
+  margin-right: 5px;
+  font-size: 0.8rem;
+}
+
+.slytherin {
+  background-color: #205e0f;
+  padding: 10px;
+  align-self: center;
+  border-radius: 5px;
+  margin-right: 5px;
+  font-size: 0.8rem;
 }
 
 .expand-more-button {
@@ -62,4 +98,12 @@
 .wand-list h3,
 .main-info-list h3 {
   margin: 0 0 10px 0;
+}
+
+@media screen and (min-width: 500px) {
+  .section-card {
+    width: 500px;
+    position: relative;
+    margin: 0 auto;
+  }
 }

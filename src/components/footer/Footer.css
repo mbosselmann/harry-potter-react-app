@@ -10,10 +10,49 @@ footer {
   width: 100%;
 }
 
-.nav-button {
-  border: 5px solid #fff;
-  background-color: #303030;
+.nav-button-gryffindor {
+  border: none;
+  background-color: #252525;
   color: #fff;
   height: 60px;
   width: 25%;
+  -webkit-box-shadow: inset 0px 0px 15px 0px #72181e;
+  box-shadow: inset 0px 0px 15px 0px #72181e;
+  font-size: 0.8rem;
 }
+.nav-button-ravenclaw {
+  border: none;
+  background-color: #252525;
+  color: #fff;
+  height: 60px;
+  width: 25%;
+  -webkit-box-shadow: inset 0px 0px 15px 0px #21486d;
+  box-shadow: inset 0px 0px 15px 0px #21486d;
+  font-size: 0.8rem;
+}
+
+.nav-button-hufflepuff {
+  border: none;
+  background-color: #252525;
+  color: #fff;
+  height: 60px;
+  width: 25%;
+  -webkit-box-shadow: inset 0px 0px 15px 0px #8f5704;
+  box-shadow: inset 0px 0px 15px 0px #8f5704;
+  font-size: 0.8rem;
+}
+
+.nav-button-slytherin {
+  border: none;
+  background-color: #252525;
+  color: #fff;
+  height: 60px;
+  width: 25%;
+  -webkit-box-shadow: inset 0px 0px 15px 0px #205e0f;
+  box-shadow: inset 0px 0px 15px 0px #205e0f;
+  font-size: 0.8rem;
+}
+
+/* .emoji {
+  padding: 0 5px 0 0;
+} */
