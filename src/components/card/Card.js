@@ -16,24 +16,14 @@ function tellHouseColor(hogwartsHouse) {
 }
 
 function Card(props) {
-  // const characterName = "Harry Potter ";
-  // const actorName = "(Daniel Radcliffe)";
-  // const gender = "male";
-  // const birthday = "31-07-1980";
-  // const patronus = "stag";
-
-  // const wandWood = "holly";
-  // const wandCore = "phoenix";
-  // const wandLength = 11;
-
-  // let hogwartsHouse = "Gryffindor";
-
   const houseColor = tellHouseColor(props.hogwartsHouse);
 
   return (
     <section className="section-card">
       <div className="section-header">
-        <img className="section-img" src={props.imageURL} alt="" />
+        <div>
+          <img className="section-img" src={props.imageURL} alt="" />
+        </div>
         <h2 className="section-header-title">{props.characterName}</h2>
         <div className={houseColor}>{props.hogwartsHouse}</div>
         <button className="expand-more-button">

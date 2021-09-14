@@ -69,7 +69,7 @@
     "hogwartsStaff": false,
     "actor": "Tom Felton",
     "alive": true,
-    "image": "http://hp-api.herokuapp.com/images/harry.jpg"
+    "image": "http://hp-api.herokuapp.com/images/draco.jpg"
   },
   {
     "name": "Minerva McGonagall",
