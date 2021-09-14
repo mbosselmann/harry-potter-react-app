@@ -1,12 +1,41 @@
 import "./Card.css";
 import expandMore from "./expand-more.png";
 
-function Card(allData) {
+function tellHouseColor(hogwartsHouse) {
+  let houseColor;
+  if (hogwartsHouse === "Gryffindor") {
+    houseColor = "gryffindor";
+  } else if (hogwartsHouse === "Ravenclaw") {
+    houseColor = "ravenclaw";
+  } else if (hogwartsHouse === "Hufflepuff") {
+    houseColor = "hufflepuff";
+  } else if (hogwartsHouse === "Slytherin") {
+    houseColor = "slytherin";
+  }
+  return houseColor;
+}
+
+function Card(props) {
+  // const characterName = "Harry Potter ";
+  // const actorName = "(Daniel Radcliffe)";
+  // const gender = "male";
+  // const birthday = "31-07-1980";
+  // const patronus = "stag";
+
+  // const wandWood = "holly";
+  // const wandCore = "phoenix";
+  // const wandLength = 11;
+
+  // let hogwartsHouse = "Gryffindor";
+
+  const houseColor = tellHouseColor(props.hogwartsHouse);
+
   return (
     <section className="section-card">
       <div className="section-header">
-        <img className="section-img" src="" alt="" />
-        <h2 className="section-header-title">Name</h2>
+        <img className="section-img" src={props.imageURL} alt="" />
+        <h2 className="section-header-title">{props.characterName}</h2>
+        <div className={houseColor}>{props.hogwartsHouse}</div>
         <button className="expand-more-button">
           <img className="expand-more-img" src={expandMore} alt="" />
         </button>
@@ -14,16 +43,15 @@ function Card(allData) {
       <div className="section-content">
         <ul className="main-info-list">
           <h3>Basics:</h3>
-          <li>Gender: </li>
-          <li>Birthday: </li>
-          <li>House: </li>
-          <li>Patronus: </li>
+          <li>Gender: {props.gender}</li>
+          <li>Birthday: {props.birthday}</li>
+          <li>Patronus: {props.patronus}</li>
         </ul>
         <ul className="wand-list">
           <h3>Wand:</h3>
-          <li>Wood:</li>
-          <li>Core:</li>
-          <li>Length:</li>
+          <li>Wood: {props.wandWood}</li>
+          <li>Core: {props.wandCore}</li>
+          <li>Length: {props.wandLength}</li>
         </ul>
       </div>
     </section>

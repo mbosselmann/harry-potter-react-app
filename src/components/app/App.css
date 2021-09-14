@@ -4,10 +4,12 @@ header {
 
 main {
   grid-area: main;
+  overflow: auto;
 }
 
 footer {
   grid-area: footer;
+  z-index: 10;
 }
 
 .App {
@@ -17,8 +19,8 @@ footer {
     "main main main"
     "footer footer footer";
   grid-auto-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px 1fr;
-  min-height: 100vh;
+  grid-template-rows: 110px 1fr 60px;
+  height: 100vh;
   background-color: #161616;
   color: #fff;
   font-family: "Raleway", sans-serif;
