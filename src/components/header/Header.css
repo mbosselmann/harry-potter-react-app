@@ -1,8 +1,3 @@
-@font-face {
-  font-family: "harry-potter";
-  src: url("./NewspaperCutoutWhiteOnBlac-Rg.ttf") format("truetype");
-}
-
 header {
   background-color: #161616;
   color: fff;
