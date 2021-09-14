@@ -104,6 +104,6 @@
   .section-card {
     width: 500px;
     position: relative;
-    margin: 0 auto;
+    margin: 15px auto 15px auto;
   }
 }
