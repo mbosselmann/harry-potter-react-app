@@ -12,6 +12,16 @@ footer {
   z-index: 10;
 }
 
+@font-face {
+  font-family: "harry-potter";
+  src: url("../header/NewspaperCutoutWhiteOnBlac-Rg.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "harry-potter-news";
+  src: url("../header/OldNewspaperTypes.ttf") format("truetype");
+}
+
 .App {
   display: grid;
   grid-template-areas:
