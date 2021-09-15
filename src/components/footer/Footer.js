@@ -6,8 +6,9 @@ function Footer() {
 
   return (
     <footer>
-      <nav id="house-filter">
+      <nav id="house-filter" aria-label="hogwarts houses menu">
         <button
+          aria-label="gryffindor"
           className={
             activeHouse === "Gryffindor"
               ? "nav-button-gryffindor--active"
@@ -20,6 +21,7 @@ function Footer() {
           G
         </button>
         <button
+          aria-label="ravenclaw"
           className={
             activeHouse === "Ravenclaw"
               ? "nav-button-ravenclaw--active"
@@ -32,6 +34,7 @@ function Footer() {
           R
         </button>
         <button
+          aria-label="hufflepuff"
           className={
             activeHouse === "Hufflepuff"
               ? "nav-button-hufflepuff--active"
@@ -44,6 +47,7 @@ function Footer() {
           H
         </button>
         <button
+          aria-label="slytherin"
           className={
             activeHouse === "Slytherin"
               ? "nav-button-slytherin--active"
