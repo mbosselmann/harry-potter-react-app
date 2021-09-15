@@ -21,6 +21,18 @@ footer {
   font-size: 2.5rem;
   font-family: harry-potter-news, serif;
 }
+
+.nav-button-gryffindor--active {
+  border: none;
+  background-color: #72181e;
+  color: #fff;
+  height: 60px;
+  width: 25%;
+  -webkit-box-shadow: inset 0px 0px 25px 0px #252525;
+  box-shadow: inset 0px 0px 25px 0px #252525;
+  font-size: 2.5rem;
+  font-family: harry-potter-news, serif;
+}
 .nav-button-ravenclaw {
   border: none;
   background-color: #252525;
@@ -29,6 +41,18 @@ footer {
   width: 25%;
   -webkit-box-shadow: inset 0px 0px 15px 0px #21486d;
   box-shadow: inset 0px 0px 15px 0px #21486d;
+  font-size: 2.5rem;
+  font-family: harry-potter-news, serif;
+}
+
+.nav-button-ravenclaw--active {
+  border: none;
+  background-color: #21486d;
+  color: #fff;
+  height: 60px;
+  width: 25%;
+  -webkit-box-shadow: inset 0px 0px 25px 0px #252525;
+  box-shadow: inset 0px 0px 25px 0px #252525;
   font-size: 2.5rem;
   font-family: harry-potter-news, serif;
 }
@@ -45,6 +69,18 @@ footer {
   font-family: harry-potter-news, serif;
 }
 
+.nav-button-hufflepuff--active {
+  border: none;
+  background-color: #8f5704;
+  color: #fff;
+  height: 60px;
+  width: 25%;
+  -webkit-box-shadow: inset 0px 0px 25px 0px #252525;
+  box-shadow: inset 0px 0px 25px 0px #252525;
+  font-size: 2.5rem;
+  font-family: harry-potter-news, serif;
+}
+
 .nav-button-slytherin {
   border: none;
   background-color: #252525;
@@ -53,6 +89,18 @@ footer {
   width: 25%;
   -webkit-box-shadow: inset 0px 0px 15px 0px #205e0f;
   box-shadow: inset 0px 0px 15px 0px #205e0f;
+  font-size: 1.5rem;
+  font-family: harry-potter-news, serif;
+}
+
+.nav-button-slytherin--active {
+  border: none;
+  background-color: #205e0f;
+  color: #fff;
+  height: 60px;
+  width: 25%;
+  -webkit-box-shadow: inset 0px 0px 25px 0px #252525;
+  box-shadow: inset 0px 0px 25px 0px #252525;
   font-size: 1.5rem;
   font-family: harry-potter-news, serif;
 }
