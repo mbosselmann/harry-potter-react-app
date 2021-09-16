@@ -43,25 +43,29 @@ function Card(props) {
           <img
             className="expand-more-img"
             src={!showDetails ? expandMore : expandLess}
-            alt=""
+            alt="show and hide details about the character"
           />
         </button>
       </div>
       {showDetails && (
         <div className="section-content">
           <div className="content-text">
-            <ul className="main-info-list">
-              <h3>Basics:</h3>
-              <li>Gender: {props.gender}</li>
-              <li>Birthday: {props.birthday}</li>
-              <li>Patronus: {props.patronus}</li>
-            </ul>
-            <ul className="wand-list">
-              <h3>Wand:</h3>
-              <li>Wood: {props.wandWood}</li>
-              <li>Core: {props.wandCore}</li>
-              <li>Length: {props.wandLength}</li>
-            </ul>
+            <div>
+              <h3 className="content-title">Basics:</h3>
+              <ul className="main-info-list">
+                <li>Gender: {props.gender}</li>
+                <li>Birthday: {props.birthday}</li>
+                <li>Patronus: {props.patronus}</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="content-title">Wand:</h3>
+              <ul className="wand-list">
+                <li>Wood: {props.wandWood}</li>
+                <li>Core: {props.wandCore}</li>
+                <li>Length: {props.wandLength}</li>
+              </ul>
+            </div>
             <div>
               {props.characterName === "Harry Potter" ? (
                 <div className="emoji">⚡</div>
