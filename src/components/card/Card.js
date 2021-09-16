@@ -19,7 +19,6 @@ function tellHouseColor(hogwartsHouse) {
 
 function Card(props) {
   const houseColor = tellHouseColor(props.hogwartsHouse);
-  // const showDetails = true;
   const [showDetails, setShowDetails] = useState(false);
   const [emoji, setEmoji] = useState("");
 
