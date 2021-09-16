@@ -26,12 +26,13 @@ function Card(props) {
     <section className="section-card">
       <div className="section-header">
         <div>
-          <img className="section-img" src={props.imageURL} alt="" />
+          <img
+            className={props.alive ? "section-img" : "section-img dead-filter"}
+            src={props.imageURL}
+            alt=""
+          />
         </div>
-        <h2 className="section-header-title">
-          {emoji}
-          {props.characterName}
-        </h2>
+        <h2 className="section-header-title">{props.characterName}</h2>
         <div className={houseColor}>{props.hogwartsHouse}</div>
         <button
           className={!showDetails ? "expand-more-button" : "expand-less-button"}
@@ -61,61 +62,66 @@ function Card(props) {
               <li>Core: {props.wandCore}</li>
               <li>Length: {props.wandLength}</li>
             </ul>
-            {props.characterName === "Harry Potter" ? (
-              <div className="emoji">⚡</div>
-            ) : (
-              <div></div>
-            )}
-            {props.characterName === "Hermione Granger" && (
-              <div className="emoji">📚</div>
-            )}
-            {props.characterName === "Ron Weasley" && (
-              <div className="emoji">🕸️</div>
-            )}
-            {props.characterName === "Minerva McGonagall" && (
-              <div className="emoji">🐱</div>
-            )}
-            {props.characterName === "Severus Snape" && (
-              <div className="emoji">🧪</div>
-            )}
-            {props.characterName === "Neville Longbottom" && (
-              <div className="emoji">⚔️</div>
-            )}
+            <div>
+              {props.characterName === "Harry Potter" ? (
+                <div className="emoji">⚡</div>
+              ) : (
+                <div></div>
+              )}
+              {props.characterName === "Hermione Granger" && (
+                <div className="emoji">📚</div>
+              )}
+              {props.characterName === "Ron Weasley" && (
+                <div className="emoji">🕸️</div>
+              )}
+              {props.characterName === "Minerva McGonagall" && (
+                <div className="emoji">🐱</div>
+              )}
+              {props.characterName === "Severus Snape" && (
+                <div className="emoji">🧪</div>
+              )}
+              {props.characterName === "Neville Longbottom" && (
+                <div className="emoji">⚔️</div>
+              )}
+              <div className="emoji"> {emoji}</div>
+            </div>
           </div>
-          <div className="emoji-buttons">
-            <button
-              className="emoji-item"
-              onClick={() => {
-                setEmoji(!emoji ? "🔴  " : "");
-              }}
-            >
-              Target 🔴
-            </button>
-            <button
-              className="emoji-item"
-              onClick={() => {
-                setEmoji(!emoji ? "🔵  " : "");
-              }}
-            >
-              Catched 🔵
-            </button>
-            <button
-              className="emoji-item"
-              onClick={() => {
-                setEmoji(!emoji ? "🟣  " : "");
-              }}
-            >
-              Dead 🟣
-            </button>
-            <button
-              className="emoji-item"
-              onClick={() => {
-                setEmoji(!emoji ? "🟢  " : "");
-              }}
-            >
-              Ally 🟢
-            </button>
-          </div>
+          {props.alive && (
+            <div className="emoji-buttons">
+              <button
+                className="emoji-item"
+                onClick={() => {
+                  setEmoji(!emoji ? "🔴  " : "");
+                }}
+              >
+                Target 🔴
+              </button>
+              <button
+                className="emoji-item"
+                onClick={() => {
+                  setEmoji(!emoji ? "🔵  " : "");
+                }}
+              >
+                Catched 🔵
+              </button>
+              <button
+                className="emoji-item"
+                onClick={() => {
+                  setEmoji(!emoji ? "🟣  " : "");
+                }}
+              >
+                Dead 🟣
+              </button>
+              <button
+                className="emoji-item"
+                onClick={() => {
+                  setEmoji(!emoji ? "🟢  " : "");
+                }}
+              >
+                Ally 🟢
+              </button>
+            </div>
+          )}
         </div>
       )}
     </section>
