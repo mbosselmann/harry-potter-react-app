@@ -1,8 +1,6 @@
 import "./Footer.css";
 
-function Footer() {
-  const [activeHouse, setActiveHouse] = useState("");
-
+function Footer({ activeHouse, onHouseButtonClick }) {
   return (
     <footer>
       <nav id="house-filter" aria-label="hogwarts houses menu">
@@ -14,7 +12,7 @@ function Footer() {
               : "nav-button-gryffindor"
           }
           onClick={() => {
-            setActiveHouse("Gryffindor");
+            onHouseButtonClick("Gryffindor");
           }}
         >
           G
@@ -27,7 +25,7 @@ function Footer() {
               : "nav-button-ravenclaw"
           }
           onClick={() => {
-            setActiveHouse("Ravenclaw");
+            onHouseButtonClick("Ravenclaw");
           }}
         >
           R
@@ -40,7 +38,7 @@ function Footer() {
               : "nav-button-hufflepuff"
           }
           onClick={() => {
-            setActiveHouse("Hufflepuff");
+            onHouseButtonClick("Hufflepuff");
           }}
         >
           H
@@ -53,7 +51,7 @@ function Footer() {
               : "nav-button-slytherin"
           }
           onClick={() => {
-            setActiveHouse("Slytherin");
+            onHouseButtonClick("Slytherin");
           }}
         >
           Allies
