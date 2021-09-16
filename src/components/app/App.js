@@ -6,13 +6,13 @@ import Card from "../card/Card";
 import { useState } from "react";
 
 function App({ data }) {
-  const [activeHouse, setActiveHouse] = useState("");
+  const [activeHouse, setActiveHouse] = useState("All");
   function handleHouseButtonClick(house) {
     setActiveHouse(house);
   }
 
   const filteredData = data.filter((character) => {
-    return character.house === activeHouse || activeHouse === "";
+    return character.house === activeHouse || activeHouse === "All";
   });
 
   return (

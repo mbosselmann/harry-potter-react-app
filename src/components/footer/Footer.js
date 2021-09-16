@@ -5,6 +5,18 @@ function Footer({ activeHouse, onHouseButtonClick }) {
     <footer>
       <nav id="house-filter" aria-label="hogwarts houses menu">
         <button
+          aria-label="all houses"
+          className={
+            activeHouse === "All" ? "nav-button-all--active" : "nav-button-all"
+          }
+          onClick={() => {
+            onHouseButtonClick("All");
+          }}
+        >
+          All
+        </button>
+
+        <button
           aria-label="gryffindor"
           className={
             activeHouse === "Gryffindor"
@@ -55,6 +67,19 @@ function Footer({ activeHouse, onHouseButtonClick }) {
           }}
         >
           Allies
+        </button>
+        <button
+          aria-label="no house"
+          className={
+            activeHouse === ""
+              ? "nav-button-nohouse--active"
+              : "nav-button-nohouse"
+          }
+          onClick={() => {
+            onHouseButtonClick("");
+          }}
+        >
+          O
         </button>
       </nav>
     </footer>

@@ -10,12 +10,36 @@ footer {
   width: 100%;
 }
 
+.nav-button-all {
+  border: none;
+  background-color: #252525;
+  color: #fff;
+  height: 60px;
+  width: 20%;
+  -webkit-box-shadow: inset 0px 0px 25px 0px #505050;
+  box-shadow: inset 0px 0px 25px 0px #505050;
+  font-size: 1.5rem;
+  font-family: harry-potter-news, serif;
+}
+
+.nav-button-all--active {
+  border: none;
+  background-color: #505050;
+  color: #fff;
+  height: 60px;
+  width: 20%;
+  -webkit-box-shadow: inset 0px 0px 25px 0px #252525;
+  box-shadow: inset 0px 0px 25px 0px #252525;
+  font-size: 1.5rem;
+  font-family: harry-potter-news, serif;
+}
+
 .nav-button-gryffindor {
   border: none;
   background-color: #252525;
   color: #fff;
   height: 60px;
-  width: 25%;
+  width: 20%;
   -webkit-box-shadow: inset 0px 0px 15px 0px #72181e;
   box-shadow: inset 0px 0px 15px 0px #72181e;
   font-size: 2.5rem;
@@ -27,7 +51,7 @@ footer {
   background-color: #72181e;
   color: #fff;
   height: 60px;
-  width: 25%;
+  width: 20%;
   -webkit-box-shadow: inset 0px 0px 25px 0px #252525;
   box-shadow: inset 0px 0px 25px 0px #252525;
   font-size: 2.5rem;
@@ -38,7 +62,7 @@ footer {
   background-color: #252525;
   color: #fff;
   height: 60px;
-  width: 25%;
+  width: 20%;
   -webkit-box-shadow: inset 0px 0px 15px 0px #21486d;
   box-shadow: inset 0px 0px 15px 0px #21486d;
   font-size: 2.5rem;
@@ -50,7 +74,7 @@ footer {
   background-color: #21486d;
   color: #fff;
   height: 60px;
-  width: 25%;
+  width: 20%;
   -webkit-box-shadow: inset 0px 0px 25px 0px #252525;
   box-shadow: inset 0px 0px 25px 0px #252525;
   font-size: 2.5rem;
@@ -62,7 +86,7 @@ footer {
   background-color: #252525;
   color: #fff;
   height: 60px;
-  width: 25%;
+  width: 20%;
   -webkit-box-shadow: inset 0px 0px 15px 0px #8f5704;
   box-shadow: inset 0px 0px 15px 0px #8f5704;
   font-size: 2.5rem;
@@ -74,7 +98,7 @@ footer {
   background-color: #8f5704;
   color: #fff;
   height: 60px;
-  width: 25%;
+  width: 20%;
   -webkit-box-shadow: inset 0px 0px 25px 0px #252525;
   box-shadow: inset 0px 0px 25px 0px #252525;
   font-size: 2.5rem;
@@ -86,7 +110,7 @@ footer {
   background-color: #252525;
   color: #fff;
   height: 60px;
-  width: 25%;
+  width: 20%;
   -webkit-box-shadow: inset 0px 0px 15px 0px #205e0f;
   box-shadow: inset 0px 0px 15px 0px #205e0f;
   font-size: 1.5rem;
@@ -98,13 +122,34 @@ footer {
   background-color: #205e0f;
   color: #fff;
   height: 60px;
-  width: 25%;
+  width: 20%;
+  -webkit-box-shadow: inset 0px 0px 25px 0px #252525;
+  box-shadow: inset 0px 0px 25px 0px #252525;
+  font-size: 1.5rem;
+  font-family: harry-potter-news, serif;
+  text-orientation: mixed;
+}
+
+.nav-button-nohouse {
+  border: none;
+  background-color: #252525;
+  color: #fff;
+  height: 60px;
+  width: 20%;
+  -webkit-box-shadow: inset 0px 0px 25px 0px #505050;
+  box-shadow: inset 0px 0px 25px 0px #505050;
+  font-size: 1.5rem;
+  font-family: harry-potter-news, serif;
+}
+
+.nav-button-nohouse--active {
+  border: none;
+  background-color: #505050;
+  color: #fff;
+  height: 60px;
+  width: 20%;
   -webkit-box-shadow: inset 0px 0px 25px 0px #252525;
   box-shadow: inset 0px 0px 25px 0px #252525;
   font-size: 1.5rem;
   font-family: harry-potter-news, serif;
 }
-
-/* .emoji {
-  padding: 0 5px 0 0;
-} */
