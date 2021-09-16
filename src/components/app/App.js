@@ -26,6 +26,7 @@ function App({ data }) {
             wandLength={character.wand.length}
             hogwartsHouse={character.house}
             imageURL={character.image}
+            alive={character.alive}
             key={character.name}
           />
         ))}
