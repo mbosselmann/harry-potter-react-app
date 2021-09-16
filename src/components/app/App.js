@@ -11,11 +11,15 @@ function App({ data }) {
     setActiveHouse(house);
   }
 
+  const filteredData = data.filter((character) => {
+    return character.house === activeHouse || activeHouse === "";
+  });
+
   return (
     <div className="App">
       <Header />
       <main className="main">
-        {data.map((character) => (
+        {filteredData.map((character) => (
           <Card
             characterName={character.name}
             gender={character.gender}
