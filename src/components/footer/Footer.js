@@ -1,12 +1,21 @@
-import { useState } from "react";
 import "./Footer.css";
 
-function Footer() {
-  const [activeHouse, setActiveHouse] = useState("");
-
+function Footer({ activeHouse, onHouseButtonClick }) {
   return (
     <footer>
       <nav id="house-filter" aria-label="hogwarts houses menu">
+        <button
+          aria-label="all houses"
+          className={
+            activeHouse === "All" ? "nav-button-all--active" : "nav-button-all"
+          }
+          onClick={() => {
+            onHouseButtonClick("All");
+          }}
+        >
+          All
+        </button>
+
         <button
           aria-label="gryffindor"
           className={
@@ -15,7 +24,7 @@ function Footer() {
               : "nav-button-gryffindor"
           }
           onClick={() => {
-            setActiveHouse("Gryffindor");
+            onHouseButtonClick("Gryffindor");
           }}
         >
           G
@@ -28,7 +37,7 @@ function Footer() {
               : "nav-button-ravenclaw"
           }
           onClick={() => {
-            setActiveHouse("Ravenclaw");
+            onHouseButtonClick("Ravenclaw");
           }}
         >
           R
@@ -41,7 +50,7 @@ function Footer() {
               : "nav-button-hufflepuff"
           }
           onClick={() => {
-            setActiveHouse("Hufflepuff");
+            onHouseButtonClick("Hufflepuff");
           }}
         >
           H
@@ -54,10 +63,23 @@ function Footer() {
               : "nav-button-slytherin"
           }
           onClick={() => {
-            setActiveHouse("Slytherin");
+            onHouseButtonClick("Slytherin");
           }}
         >
           Allies
+        </button>
+        <button
+          aria-label="no house"
+          className={
+            activeHouse === ""
+              ? "nav-button-nohouse--active"
+              : "nav-button-nohouse"
+          }
+          onClick={() => {
+            onHouseButtonClick("");
+          }}
+        >
+          O
         </button>
       </nav>
     </footer>

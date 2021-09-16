@@ -3,14 +3,23 @@ import "./App.css";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import Card from "../card/Card";
-import data from "../../data.json";
+import { useState } from "react";
 
-function App() {
+function App({ data }) {
+  const [activeHouse, setActiveHouse] = useState("All");
+  function handleHouseButtonClick(house) {
+    setActiveHouse(house);
+  }
+
+  const filteredData = data.filter((character) => {
+    return character.house === activeHouse || activeHouse === "All";
+  });
+
   return (
     <div className="App">
       <Header />
       <main className="main">
-        {data.map((character) => (
+        {filteredData.map((character) => (
           <Card
             characterName={character.name}
             gender={character.gender}
@@ -21,11 +30,15 @@ function App() {
             wandLength={character.wand.length}
             hogwartsHouse={character.house}
             imageURL={character.image}
+            alive={character.alive}
             key={character.name}
           />
         ))}
       </main>
-      <Footer />
+      <Footer
+        activeHouse={activeHouse}
+        onHouseButtonClick={handleHouseButtonClick}
+      />
     </div>
   );
 }
