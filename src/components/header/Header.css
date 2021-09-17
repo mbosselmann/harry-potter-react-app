@@ -1,6 +1,7 @@
-header {
+.header-container {
   background-color: #161616;
   color: fff;
+  height: 110px;
 }
 
 .header-app {
@@ -9,7 +10,34 @@ header {
   align-items: center;
   max-width: 500px;
   position: relative;
+  padding: 0 0 20px 0;
   margin: 0 auto;
+}
+
+.gryffindor-header {
+  -webkit-box-shadow: inset 0px 0px 35px 0px #72181e;
+  box-shadow: inset 0px 0px 35px 0px #72181e;
+}
+
+.ravenclaw-header {
+  -webkit-box-shadow: inset 0px 0px 35px 0px #21486d;
+  box-shadow: inset 0px 0px 35px 0px #21486d;
+}
+
+.hufflepuff-header {
+  -webkit-box-shadow: inset 0px 0px 35px 0px #8f5704;
+  box-shadow: inset 0px 0px 35px 0px #8f5704;
+}
+
+.slytherin-header {
+  -webkit-box-shadow: inset 0px 0px 35px 0px #205e0f;
+  box-shadow: inset 0px 0px 35px 0px #205e0f;
+}
+
+.all-header,
+.nohouse-header {
+  -webkit-box-shadow: inset 0px 0px 35px 0px #505050;
+  box-shadow: inset 0px 0px 35px 0px #505050;
 }
 
 h1 {
