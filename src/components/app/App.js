@@ -56,7 +56,10 @@ function App({ data }) {
 
   return (
     <div className="App">
-      <Header />
+      <Header
+        onHouseButtonClick={handleHouseButtonClick}
+        activeHouse={activeHouse}
+      />
       <main className="main">
         {filteredData.map((character) => (
           <Card
