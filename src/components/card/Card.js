@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./Card.css";
 import expandMore from "./expand-more.png";
 import expandLess from "./expand-less.png";
+import targetIMG from "./target-white.png";
 
 function tellHouseColor(hogwartsHouse) {
   let houseColor;
