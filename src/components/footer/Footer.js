@@ -7,7 +7,8 @@ function Footer({ activeHouse, onHouseButtonClick }) {
         <button
           aria-label="all houses"
           className={
-            activeHouse === "All" ? "nav-button-all--active" : "nav-button-all"
+            "nav-button-all " +
+            (activeHouse === "All" ? "nav-button-all--active" : "")
           }
           onClick={() => {
             onHouseButtonClick("All");
@@ -19,9 +20,10 @@ function Footer({ activeHouse, onHouseButtonClick }) {
         <button
           aria-label="gryffindor"
           className={
-            activeHouse === "Gryffindor"
+            "nav-button-gryffindor " +
+            (activeHouse === "Gryffindor"
               ? "nav-button-gryffindor--active"
-              : "nav-button-gryffindor"
+              : "")
           }
           onClick={() => {
             onHouseButtonClick("Gryffindor");
@@ -32,9 +34,8 @@ function Footer({ activeHouse, onHouseButtonClick }) {
         <button
           aria-label="ravenclaw"
           className={
-            activeHouse === "Ravenclaw"
-              ? "nav-button-ravenclaw--active"
-              : "nav-button-ravenclaw"
+            "nav-button-ravenclaw " +
+            (activeHouse === "Ravenclaw" ? "nav-button-ravenclaw--active" : "")
           }
           onClick={() => {
             onHouseButtonClick("Ravenclaw");
@@ -45,9 +46,10 @@ function Footer({ activeHouse, onHouseButtonClick }) {
         <button
           aria-label="hufflepuff"
           className={
-            activeHouse === "Hufflepuff"
+            "nav-button-hufflepuff " +
+            (activeHouse === "Hufflepuff"
               ? "nav-button-hufflepuff--active"
-              : "nav-button-hufflepuff"
+              : "")
           }
           onClick={() => {
             onHouseButtonClick("Hufflepuff");
@@ -58,9 +60,8 @@ function Footer({ activeHouse, onHouseButtonClick }) {
         <button
           aria-label="slytherin"
           className={
-            activeHouse === "Slytherin"
-              ? "nav-button-slytherin--active"
-              : "nav-button-slytherin"
+            "nav-button-slytherin " +
+            (activeHouse === "Slytherin" ? "nav-button-slytherin--active" : "")
           }
           onClick={() => {
             onHouseButtonClick("Slytherin");
@@ -71,9 +72,8 @@ function Footer({ activeHouse, onHouseButtonClick }) {
         <button
           aria-label="no house"
           className={
-            activeHouse === ""
-              ? "nav-button-nohouse--active"
-              : "nav-button-nohouse"
+            "nav-button-nohouse " +
+            (activeHouse === "" ? "nav-button-nohouse--active" : "")
           }
           onClick={() => {
             onHouseButtonClick("");
