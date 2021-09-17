@@ -6,9 +6,20 @@ import Card from "../card/Card";
 import { useState } from "react";
 
 function App({ data }) {
-  const [activeHouse, setActiveHouse] = useState("All");
-  function handleHouseButtonClick(house) {
-    setActiveHouse(house);
+  const [activeHouse, setActiveHouse] = useState(() => {
+    if (localStorage.getItem("activeHouseLocalStorage")) {
+      return JSON.parse(localStorage.getItem("activeHouseLocalStorage"));
+    } else {
+      return "All";
+    }
+  });
+
+  function handleHouseButtonClick(newActiveHouse) {
+    setActiveHouse(newActiveHouse);
+    localStorage.setItem(
+      "activeHouseLocalStorage",
+      JSON.stringify(newActiveHouse)
+    );
   }
 
   const filteredData = data.filter((character) => {
