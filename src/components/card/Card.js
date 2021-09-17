@@ -23,7 +23,9 @@ function Card(props) {
   const [emoji, setEmoji] = useState("");
 
   return (
-    <section className="section-card">
+    <section
+      className={"section-card " + (props.isTarget ? "card-target" : "")}
+    >
       <div className="section-header">
         <div>
           <img
@@ -32,8 +34,24 @@ function Card(props) {
             alt=""
           />
         </div>
-        <h2 className="section-header-title">{props.characterName}</h2>
-        <div className={houseColor}>{props.hogwartsHouse}</div>
+        <div className="section-name-and-house">
+          <h2 className="section-header-title">{props.characterName}</h2>
+          <div className={houseColor}>{props.hogwartsHouse}</div>
+        </div>
+
+        <button
+          className={
+            props.isTarget
+              ? "next-target-button next-target-button--active"
+              : "next-target-button "
+          }
+          onClick={() => {
+            props.onTargetButtonClick(props.characterName);
+          }}
+        >
+          <img className="target-img" src={targetIMG} alt="target-button" />
+        </button>
+
         <button
           className={!showDetails ? "expand-more-button" : "expand-less-button"}
           onClick={() => {
@@ -87,7 +105,7 @@ function Card(props) {
               {props.characterName === "Neville Longbottom" && (
                 <div className="emoji">⚔️</div>
               )}
-              <div className="emoji"> {emoji}</div>
+              <div className="emoji">{emoji}</div>
             </div>
           </div>
           {props.alive && (

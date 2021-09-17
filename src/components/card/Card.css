@@ -5,6 +5,11 @@
   min-width: 330px;
 }
 
+.card-target {
+  -webkit-box-shadow: 0px 0px 25px 0px #205e0f;
+  box-shadow: 0px 0px 25px 0px #205e0f;
+}
+
 .section-header {
   background-color: #252525;
   border-radius: 5px 5px 0 0;
@@ -13,46 +18,74 @@
   height: 70px;
 }
 
+.section-name-and-house {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
 .section-header-title {
-  padding: 10px 20px 10px 30px;
+  padding: 10px 20px 10px 10px;
   font-size: 0.9rem;
   align-self: center;
 }
 
+.next-target-button {
+  border: none;
+  background-color: #303030;
+  color: #fff;
+  width: 50px;
+}
+
+.target-img {
+  padding-top: 2px;
+  width: 30px;
+  height: 30px;
+}
+
+.next-target-button--active {
+  -webkit-box-shadow: inset 0px 0px 15px 0px #205e0f;
+  box-shadow: inset 0px 0px 15px 0px #205e0f;
+}
+
 .gryffindor {
   background-color: #55171b;
-  padding: 10px;
-  align-self: center;
+  padding: 5px;
   border-radius: 5px;
-  margin-right: 5px;
   font-size: 0.8rem;
+  margin-left: 5px;
+  width: 100px;
+  text-align: center;
 }
 
 .ravenclaw {
   background-color: #1a3956;
-  padding: 10px;
-  align-self: center;
+  padding: 5px;
   border-radius: 5px;
-  margin-right: 5px;
   font-size: 0.8rem;
+  margin-left: 5px;
+  width: 100px;
+  text-align: center;
 }
 
 .hufflepuff {
   background-color: #d88304;
-  padding: 10px;
-  align-self: center;
+  padding: 5px;
   border-radius: 5px;
-  margin-right: 5px;
   font-size: 0.8rem;
+  margin-left: 5px;
+  width: 100px;
+  text-align: center;
 }
 
 .slytherin {
   background-color: #205e0f;
-  padding: 10px;
-  align-self: center;
+  padding: 5px;
   border-radius: 5px;
-  margin-right: 5px;
   font-size: 0.8rem;
+  margin-left: 5px;
+  width: 100px;
+  text-align: center;
 }
 
 .expand-more-button {
