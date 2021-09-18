@@ -4,6 +4,7 @@ import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import Card from "../card/Card";
 import { useState } from "react";
+import Title from "../title/Title";
 
 function App({ data }) {
   const [activeHouse, setActiveHouse] = useState(() => {
@@ -56,11 +57,9 @@ function App({ data }) {
 
   return (
     <div className="App">
-      <Header
-        onHouseButtonClick={handleHouseButtonClick}
-        activeHouse={activeHouse}
-      />
+      <Header activeHouse={activeHouse} />
       <main className="main">
+        <Title activeHouse={activeHouse} filteredData={filteredData} />
         {filteredData.map((character) => (
           <Card
             characterName={character.name}

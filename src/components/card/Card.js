@@ -36,7 +36,7 @@ function Card(props) {
           />
         </div>
         <div className="section-name-and-house">
-          <h2 className="section-header-title">{props.characterName}</h2>
+          <p className="section-header-title">{props.characterName}</p>
           <div className={houseColor}>{props.hogwartsHouse}</div>
         </div>
 
