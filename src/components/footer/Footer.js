@@ -1,85 +1,119 @@
+import { useState } from "react";
 import "./Footer.css";
 
-function Footer({ activeHouse, onHouseButtonClick }) {
+function Footer({ activeHouse, onHouseButtonClick, onShowTargetsButtonClick }) {
+  const [dropUpMenuContent, setDropUpMenuContent] = useState(false);
+
   return (
     <footer>
       <nav id="house-filter" aria-label="hogwarts houses menu">
+        <div className="dropUpMenu">
+          <button
+            className={
+              "dropUpHouses " +
+              (dropUpMenuContent ? "dropUpHouses--active" : "")
+            }
+            onClick={() => {
+              setDropUpMenuContent(!dropUpMenuContent);
+            }}
+          >
+            Filter
+          </button>
+          {dropUpMenuContent && (
+            <div className="dropUpMenu__content">
+              <button
+                aria-label="all houses"
+                className={
+                  "nav-button-all " +
+                  (activeHouse === "All" ? "nav-button-all--active" : "")
+                }
+                onClick={() => {
+                  onHouseButtonClick("All");
+                  setDropUpMenuContent(!dropUpMenuContent);
+                }}
+              >
+                All targets
+              </button>
+              <button
+                aria-label="gryffindor"
+                className={
+                  "nav-button-gryffindor " +
+                  (activeHouse === "Gryffindor"
+                    ? "nav-button-gryffindor--active"
+                    : "")
+                }
+                onClick={() => {
+                  onHouseButtonClick("Gryffindor");
+                  setDropUpMenuContent(!dropUpMenuContent);
+                }}
+              >
+                Gryffindor
+              </button>
+              <button
+                aria-label="ravenclaw"
+                className={
+                  "nav-button-ravenclaw " +
+                  (activeHouse === "Ravenclaw"
+                    ? "nav-button-ravenclaw--active"
+                    : "")
+                }
+                onClick={() => {
+                  onHouseButtonClick("Ravenclaw");
+                  setDropUpMenuContent(!dropUpMenuContent);
+                }}
+              >
+                Ravenclaw
+              </button>
+              <button
+                aria-label="hufflepuff"
+                className={
+                  "nav-button-hufflepuff " +
+                  (activeHouse === "Hufflepuff"
+                    ? "nav-button-hufflepuff--active"
+                    : "")
+                }
+                onClick={() => {
+                  onHouseButtonClick("Hufflepuff");
+                  setDropUpMenuContent(!dropUpMenuContent);
+                }}
+              >
+                Hufflepuff
+              </button>
+              <button
+                aria-label="no house"
+                className={
+                  "nav-button-nohouse " +
+                  (activeHouse === "" ? "nav-button-nohouse--active" : "")
+                }
+                onClick={() => {
+                  onHouseButtonClick("");
+                  setDropUpMenuContent(!dropUpMenuContent);
+                }}
+              >
+                House unknown
+              </button>
+            </div>
+          )}
+        </div>
         <button
-          aria-label="all houses"
-          className={
-            activeHouse === "All" ? "nav-button-all--active" : "nav-button-all"
-          }
+          className="target-list"
           onClick={() => {
-            onHouseButtonClick("All");
+            onShowTargetsButtonClick();
           }}
         >
-          All
-        </button>
-
-        <button
-          aria-label="gryffindor"
-          className={
-            activeHouse === "Gryffindor"
-              ? "nav-button-gryffindor--active"
-              : "nav-button-gryffindor"
-          }
-          onClick={() => {
-            onHouseButtonClick("Gryffindor");
-          }}
-        >
-          G
-        </button>
-        <button
-          aria-label="ravenclaw"
-          className={
-            activeHouse === "Ravenclaw"
-              ? "nav-button-ravenclaw--active"
-              : "nav-button-ravenclaw"
-          }
-          onClick={() => {
-            onHouseButtonClick("Ravenclaw");
-          }}
-        >
-          R
-        </button>
-        <button
-          aria-label="hufflepuff"
-          className={
-            activeHouse === "Hufflepuff"
-              ? "nav-button-hufflepuff--active"
-              : "nav-button-hufflepuff"
-          }
-          onClick={() => {
-            onHouseButtonClick("Hufflepuff");
-          }}
-        >
-          H
+          Targets
         </button>
         <button
           aria-label="slytherin"
           className={
-            activeHouse === "Slytherin"
-              ? "nav-button-slytherin--active"
-              : "nav-button-slytherin"
+            "nav-button-slytherin " +
+            (activeHouse === "Slytherin" ? "nav-button-slytherin--active" : "")
           }
           onClick={() => {
             onHouseButtonClick("Slytherin");
           }}
         >
           Allies
-        </button>
-        <button
-          aria-label="no house"
-          className={
-            activeHouse === ""
-              ? "nav-button-nohouse--active"
-              : "nav-button-nohouse"
-          }
-          onClick={() => {
-            onHouseButtonClick("");
-          }}
-        >
-          O
         </button>
       </nav>
     </footer>

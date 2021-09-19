@@ -10,99 +10,156 @@ footer {
   width: 100%;
 }
 
+.dropUpMenu {
+  border: none;
+  background-color: #505050;
+  width: 33%;
+  text-align: center;
+  background-color: #252525;
+  color: #fff;
+  height: 60px;
+  -webkit-box-shadow: inset 0px 0px 15px 0px #205e0f;
+  box-shadow: inset 0px 0px 15px 0px #205e0f;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+}
+
+.dropUpHouses {
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  height: 60px;
+  width: 100%;
+}
+
+.dropUpHouses--active {
+  width: 100%;
+  background-color: #205e0f;
+  -webkit-box-shadow: inset 0px 0px 25px 0px #252525;
+  box-shadow: inset 0px 0px 25px 0px #252525;
+}
+
+.dropUpMenu__content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  width: 50%;
+  z-index: 1;
+}
+
 .nav-button-all {
   border: none;
   background-color: #252525;
   color: #fff;
-  height: 60px;
-  width: 20%;
+  height: 40px;
   -webkit-box-shadow: inset 0px 0px 25px 0px #505050;
   box-shadow: inset 0px 0px 25px 0px #505050;
-  font-size: 1.5rem;
-  font-family: harry-potter-news, serif;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+  text-align: left;
+  padding-left: 20px;
 }
 
 .nav-button-all--active {
   border: none;
   background-color: #505050;
   color: #fff;
-  height: 60px;
-  width: 20%;
+  height: 40px;
   -webkit-box-shadow: inset 0px 0px 25px 0px #252525;
   box-shadow: inset 0px 0px 25px 0px #252525;
-  font-size: 1.5rem;
-  font-family: harry-potter-news, serif;
 }
 
 .nav-button-gryffindor {
   border: none;
   background-color: #252525;
   color: #fff;
-  height: 60px;
-  width: 20%;
+  height: 40px;
   -webkit-box-shadow: inset 0px 0px 15px 0px #72181e;
   box-shadow: inset 0px 0px 15px 0px #72181e;
-  font-size: 2.5rem;
-  font-family: harry-potter-news, serif;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+  text-align: left;
+  padding-left: 20px;
 }
 
 .nav-button-gryffindor--active {
-  border: none;
   background-color: #72181e;
-  color: #fff;
-  height: 60px;
-  width: 20%;
   -webkit-box-shadow: inset 0px 0px 25px 0px #252525;
   box-shadow: inset 0px 0px 25px 0px #252525;
-  font-size: 2.5rem;
-  font-family: harry-potter-news, serif;
 }
 .nav-button-ravenclaw {
   border: none;
   background-color: #252525;
   color: #fff;
-  height: 60px;
-  width: 20%;
+  height: 40px;
   -webkit-box-shadow: inset 0px 0px 15px 0px #21486d;
   box-shadow: inset 0px 0px 15px 0px #21486d;
-  font-size: 2.5rem;
-  font-family: harry-potter-news, serif;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+  text-align: left;
+  padding-left: 20px;
 }
 
 .nav-button-ravenclaw--active {
-  border: none;
   background-color: #21486d;
-  color: #fff;
-  height: 60px;
-  width: 20%;
   -webkit-box-shadow: inset 0px 0px 25px 0px #252525;
   box-shadow: inset 0px 0px 25px 0px #252525;
-  font-size: 2.5rem;
-  font-family: harry-potter-news, serif;
 }
 
 .nav-button-hufflepuff {
   border: none;
   background-color: #252525;
   color: #fff;
-  height: 60px;
-  width: 20%;
+  height: 40px;
   -webkit-box-shadow: inset 0px 0px 15px 0px #8f5704;
   box-shadow: inset 0px 0px 15px 0px #8f5704;
-  font-size: 2.5rem;
-  font-family: harry-potter-news, serif;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+  text-align: left;
+  padding-left: 20px;
 }
 
 .nav-button-hufflepuff--active {
-  border: none;
   background-color: #8f5704;
-  color: #fff;
-  height: 60px;
-  width: 20%;
   -webkit-box-shadow: inset 0px 0px 25px 0px #252525;
   box-shadow: inset 0px 0px 25px 0px #252525;
-  font-size: 2.5rem;
-  font-family: harry-potter-news, serif;
+}
+
+.nav-button-nohouse {
+  border: none;
+  background-color: #252525;
+  color: #fff;
+  height: 40px;
+  -webkit-box-shadow: inset 0px 0px 25px 0px #505050;
+  box-shadow: inset 0px 0px 25px 0px #505050;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.nav-button-nohouse--active {
+  background-color: #505050;
+  -webkit-box-shadow: inset 0px 0px 25px 0px #252525;
+  box-shadow: inset 0px 0px 25px 0px #252525;
+}
+
+.target-list {
+  border: none;
+  background-color: #252525;
+  color: #fff;
+  height: 60px;
+  width: 33%;
+  font-size: 1.5rem;
+  -webkit-box-shadow: inset 0px 0px 15px 0px #205e0f;
+  box-shadow: inset 0px 0px 15px 0px #205e0f;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
 }
 
 .nav-button-slytherin {
@@ -110,46 +167,16 @@ footer {
   background-color: #252525;
   color: #fff;
   height: 60px;
-  width: 20%;
+  width: 33%;
+  font-size: 1.5rem;
   -webkit-box-shadow: inset 0px 0px 15px 0px #205e0f;
   box-shadow: inset 0px 0px 15px 0px #205e0f;
-  font-size: 1.5rem;
-  font-family: harry-potter-news, serif;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
 }
 
 .nav-button-slytherin--active {
-  border: none;
   background-color: #205e0f;
-  color: #fff;
-  height: 60px;
-  width: 20%;
   -webkit-box-shadow: inset 0px 0px 25px 0px #252525;
   box-shadow: inset 0px 0px 25px 0px #252525;
-  font-size: 1.5rem;
-  font-family: harry-potter-news, serif;
-  text-orientation: mixed;
-}
-
-.nav-button-nohouse {
-  border: none;
-  background-color: #252525;
-  color: #fff;
-  height: 60px;
-  width: 20%;
-  -webkit-box-shadow: inset 0px 0px 25px 0px #505050;
-  box-shadow: inset 0px 0px 25px 0px #505050;
-  font-size: 1.5rem;
-  font-family: harry-potter-news, serif;
-}
-
-.nav-button-nohouse--active {
-  border: none;
-  background-color: #505050;
-  color: #fff;
-  height: 60px;
-  width: 20%;
-  -webkit-box-shadow: inset 0px 0px 25px 0px #252525;
-  box-shadow: inset 0px 0px 25px 0px #252525;
-  font-size: 1.5rem;
-  font-family: harry-potter-news, serif;
 }

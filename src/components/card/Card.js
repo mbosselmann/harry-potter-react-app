@@ -36,23 +36,24 @@ function Card(props) {
           />
         </div>
         <div className="section-name-and-house">
-          <h2 className="section-header-title">{props.characterName}</h2>
+          <p className="section-header-title">{props.characterName}</p>
           <div className={houseColor}>{props.hogwartsHouse}</div>
         </div>
 
-        <button
-          className={
-            props.isTarget
-              ? "next-target-button next-target-button--active"
-              : "next-target-button "
-          }
-          onClick={() => {
-            props.onTargetButtonClick(props.characterName);
-          }}
-        >
-          <img className="target-img" src={targetIMG} alt="target-button" />
-        </button>
-
+        {props.hogwartsHouse !== "Slytherin" && (
+          <button
+            className={
+              props.isTarget
+                ? "next-target-button next-target-button--active"
+                : "next-target-button "
+            }
+            onClick={() => {
+              props.onTargetButtonClick(props.characterName);
+            }}
+          >
+            <img className="target-img" src={targetIMG} alt="target-button" />
+          </button>
+        )}
         <button
           className={!showDetails ? "expand-more-button" : "expand-less-button"}
           onClick={() => {
@@ -72,17 +73,17 @@ function Card(props) {
             <div>
               <h3 className="content-title">Basics:</h3>
               <ul className="main-info-list">
-                <li>Gender: {props.gender}</li>
-                <li>Birthday: {props.birthday}</li>
-                <li>Patronus: {props.patronus}</li>
+                <li>Gender: {props.gender || "n/a"}</li>
+                <li>Birthday: {props.birthday || "n/a"}</li>
+                <li>Patronus: {props.patronus || "n/a"}</li>
               </ul>
             </div>
             <div>
               <h3 className="content-title">Wand:</h3>
               <ul className="wand-list">
-                <li>Wood: {props.wandWood}</li>
-                <li>Core: {props.wandCore}</li>
-                <li>Length: {props.wandLength}</li>
+                <li>Wood: {props.wandWood || "n/a"}</li>
+                <li>Core: {props.wandCore || "n/a"}</li>
+                <li>Length: {props.wandLength || "n/a"}</li>
               </ul>
             </div>
             <div>

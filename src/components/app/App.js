@@ -4,6 +4,7 @@ import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import Card from "../card/Card";
 import { useState } from "react";
+import Title from "../title/Title";
 
 function App({ data }) {
   const [activeHouse, setActiveHouse] = useState(() => {
@@ -14,7 +15,14 @@ function App({ data }) {
     }
   });
 
+  const [showTargets, setShowTargets] = useState(false);
+
+  function showTargetsClickButton() {
+    setShowTargets(true);
+  }
+
   function handleHouseButtonClick(newActiveHouse) {
+    setShowTargets(false);
     setActiveHouse(newActiveHouse);
     localStorage.setItem(
       "activeHouseLocalStorage",
@@ -22,11 +30,7 @@ function App({ data }) {
     );
   }
 
-  const filteredData = data.filter((character) => {
-    return character.house === activeHouse || activeHouse === "All";
-  });
-
-  const [targets, setTarget] = useState(() => {
+  const [targets, setTargets] = useState(() => {
     if (localStorage.getItem("targetLocalStorage")) {
       return JSON.parse(localStorage.getItem("targetLocalStorage"));
     } else {
@@ -37,9 +41,9 @@ function App({ data }) {
   function handleTargetButtonClick(characterName) {
     const isTarget = targets.includes(characterName);
 
-    let newTarget;
+    let newTargets;
     if (isTarget) {
-      newTarget = targets.filter((item) => {
+      newTargets = targets.filter((item) => {
         if (item === characterName) {
           return false;
         } else {
@@ -47,17 +51,28 @@ function App({ data }) {
         }
       });
     } else {
-      newTarget = targets.concat(characterName);
+      newTargets = targets.concat(characterName);
     }
 
-    setTarget(newTarget);
-    localStorage.setItem("targetLocalStorage", JSON.stringify(newTarget));
+    setTargets(newTargets);
+    localStorage.setItem("targetLocalStorage", JSON.stringify(newTargets));
   }
+
+  const filteredData = data.filter((character) => {
+    if (showTargets) {
+      return targets.includes(character.name);
+    } else {
+      return character.house === activeHouse || activeHouse === "All";
+    }
+  });
 
   return (
     <div className="App">
-      <Header />
+      <Header activeHouse={activeHouse} />
       <main className="main">
+        {!showTargets && (
+          <Title activeHouse={activeHouse} filteredData={filteredData} />
+        )}
         {filteredData.map((character) => (
           <Card
             characterName={character.name}
@@ -79,6 +94,7 @@ function App({ data }) {
       <Footer
         activeHouse={activeHouse}
         onHouseButtonClick={handleHouseButtonClick}
+        onShowTargetsButtonClick={showTargetsClickButton}
       />
     </div>
   );
