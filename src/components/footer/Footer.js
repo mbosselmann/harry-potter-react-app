@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Footer.css";
 
-function Footer({ activeHouse, onHouseButtonClick }) {
+function Footer({ activeHouse, onHouseButtonClick, onShowTargetsButtonClick }) {
   const [dropUpMenuContent, setDropUpMenuContent] = useState(false);
 
   return (
@@ -95,7 +95,14 @@ function Footer({ activeHouse, onHouseButtonClick }) {
             </div>
           )}
         </div>
-        <button className="target-list">Targets</button>
+        <button
+          className="target-list"
+          onClick={() => {
+            onShowTargetsButtonClick();
+          }}
+        >
+          Targets
+        </button>
         <button
           aria-label="slytherin"
           className={
