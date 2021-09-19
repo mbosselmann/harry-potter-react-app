@@ -29,31 +29,28 @@ function Card(props) {
     >
       <div className="section-header">
         <div>
-          <img
-            className={props.alive ? "section-img" : "section-img dead-filter"}
-            src={props.imageURL}
-            alt=""
-          />
+          <img className="section-img" src={props.imageURL} alt="" />
         </div>
         <div className="section-name-and-house">
-          <p className="section-header-title">{props.characterName}</p>
-          <div className={houseColor}>{props.hogwartsHouse}</div>
+          <div className="section-section">
+            <p className="section-header-title">{props.characterName}</p>
+            <div className={houseColor}>{props.hogwartsHouse}</div>
+          </div>
+          {props.hogwartsHouse !== "Slytherin" && (
+            <button
+              className={
+                props.isTarget
+                  ? "next-target-button next-target-button--active"
+                  : "next-target-button "
+              }
+              onClick={() => {
+                props.onTargetButtonClick(props.characterName);
+              }}
+            >
+              <img className="target-img" src={targetIMG} alt="target-button" />
+            </button>
+          )}
         </div>
-
-        {props.hogwartsHouse !== "Slytherin" && (
-          <button
-            className={
-              props.isTarget
-                ? "next-target-button next-target-button--active"
-                : "next-target-button "
-            }
-            onClick={() => {
-              props.onTargetButtonClick(props.characterName);
-            }}
-          >
-            <img className="target-img" src={targetIMG} alt="target-button" />
-          </button>
-        )}
         <button
           className={!showDetails ? "expand-more-button" : "expand-less-button"}
           onClick={() => {
@@ -110,42 +107,40 @@ function Card(props) {
               <div className="emoji">{emoji}</div>
             </div>
           </div>
-          {props.alive && (
-            <div className="emoji-buttons">
-              <button
-                className="emoji-item"
-                onClick={() => {
-                  setEmoji(!emoji ? "🔴  " : "");
-                }}
-              >
-                Target 🔴
-              </button>
-              <button
-                className="emoji-item"
-                onClick={() => {
-                  setEmoji(!emoji ? "🔵  " : "");
-                }}
-              >
-                Catched 🔵
-              </button>
-              <button
-                className="emoji-item"
-                onClick={() => {
-                  setEmoji(!emoji ? "🟣  " : "");
-                }}
-              >
-                Dead 🟣
-              </button>
-              <button
-                className="emoji-item"
-                onClick={() => {
-                  setEmoji(!emoji ? "🟢  " : "");
-                }}
-              >
-                Ally 🟢
-              </button>
-            </div>
-          )}
+          <div className="emoji-buttons">
+            <button
+              className="emoji-item emoji-item-border1"
+              onClick={() => {
+                setEmoji(!emoji ? "☠️" : "");
+              }}
+            >
+              ☠️
+            </button>
+            <button
+              className="emoji-item"
+              onClick={() => {
+                setEmoji(!emoji ? "🌕" : "");
+              }}
+            >
+              🌕
+            </button>
+            <button
+              className="emoji-item"
+              onClick={() => {
+                setEmoji(!emoji ? "👻" : "");
+              }}
+            >
+              👻
+            </button>
+            <button
+              className="emoji-item emoji-item-border2"
+              onClick={() => {
+                setEmoji(!emoji ? "🕯️" : "");
+              }}
+            >
+              🕯️
+            </button>
+          </div>
         </div>
       )}
     </section>

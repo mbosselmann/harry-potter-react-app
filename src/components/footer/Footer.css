@@ -13,13 +13,13 @@ footer {
 .dropUpMenu {
   border: none;
   background-color: #505050;
-  width: 33%;
+  flex: 1;
   text-align: center;
   background-color: #252525;
   color: #fff;
   height: 60px;
-  -webkit-box-shadow: inset 0px 0px 15px 0px #205e0f;
-  box-shadow: inset 0px 0px 15px 0px #205e0f;
+  -webkit-box-shadow: inset 0px 0px 15px 0px #505050;
+  box-shadow: inset 0px 0px 15px 0px #505050;
   font-family: "Roboto Mono", monospace;
   text-transform: uppercase;
 }
@@ -37,7 +37,7 @@ footer {
 
 .dropUpHouses--active {
   width: 100%;
-  background-color: #205e0f;
+  background-color: #505050;
   -webkit-box-shadow: inset 0px 0px 25px 0px #252525;
   box-shadow: inset 0px 0px 25px 0px #252525;
 }
@@ -57,8 +57,8 @@ footer {
   background-color: #252525;
   color: #fff;
   height: 40px;
-  -webkit-box-shadow: inset 0px 0px 25px 0px #505050;
-  box-shadow: inset 0px 0px 25px 0px #505050;
+  -webkit-box-shadow: inset 0px 0px 15px 0px rgb(161, 161, 161);
+  box-shadow: inset 0px 0px 15px 0px rgb(161, 161, 161);
   font-family: "Roboto Mono", monospace;
   text-transform: uppercase;
   text-align: left;
@@ -67,7 +67,7 @@ footer {
 
 .nav-button-all--active {
   border: none;
-  background-color: #505050;
+  background-color: rgb(161, 161, 161);
   color: #fff;
   height: 40px;
   -webkit-box-shadow: inset 0px 0px 25px 0px #252525;
@@ -154,12 +154,18 @@ footer {
   background-color: #252525;
   color: #fff;
   height: 60px;
-  width: 33%;
+  flex: 1;
   font-size: 1.5rem;
-  -webkit-box-shadow: inset 0px 0px 15px 0px #205e0f;
-  box-shadow: inset 0px 0px 15px 0px #205e0f;
+  -webkit-box-shadow: inset 0px 0px 15px 0px #72181e;
+  box-shadow: inset 0px 0px 15px 0px #72181e;
   font-family: "Roboto Mono", monospace;
   text-transform: uppercase;
+}
+
+.target-list--active {
+  background-color: #72181e;
+  -webkit-box-shadow: inset 0px 0px 25px 0px #252525;
+  box-shadow: inset 0px 0px 25px 0px #252525;
 }
 
 .nav-button-slytherin {
@@ -167,7 +173,7 @@ footer {
   background-color: #252525;
   color: #fff;
   height: 60px;
-  width: 33%;
+  flex: 1;
   font-size: 1.5rem;
   -webkit-box-shadow: inset 0px 0px 15px 0px #205e0f;
   box-shadow: inset 0px 0px 15px 0px #205e0f;

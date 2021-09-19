@@ -1,7 +1,14 @@
 import { useState } from "react";
 import "./Footer.css";
 
-function Footer({ activeHouse, onHouseButtonClick, onShowTargetsButtonClick }) {
+function Footer({
+  activeHouse,
+  setActiveHouse,
+  onHouseButtonClick,
+  onShowTargetsButtonClick,
+  showTargets,
+  setShowTargets,
+}) {
   const [dropUpMenuContent, setDropUpMenuContent] = useState(false);
 
   return (
@@ -15,6 +22,11 @@ function Footer({ activeHouse, onHouseButtonClick, onShowTargetsButtonClick }) {
             }
             onClick={() => {
               setDropUpMenuContent(!dropUpMenuContent);
+              if (showTargets) {
+                setShowTargets(!showTargets);
+              } else if (activeHouse === "Slytherin") {
+                setActiveHouse("All");
+              }
             }}
           >
             Filter
@@ -96,9 +108,14 @@ function Footer({ activeHouse, onHouseButtonClick, onShowTargetsButtonClick }) {
           )}
         </div>
         <button
-          className="target-list"
+          className={
+            "target-list " + (showTargets ? "target-list--active" : "")
+          }
           onClick={() => {
             onShowTargetsButtonClick();
+            if (dropUpMenuContent) {
+              setDropUpMenuContent(!dropUpMenuContent);
+            } else if (activeHouse === "Slytherin") setActiveHouse("no");
           }}
         >
           Targets
@@ -111,6 +128,9 @@ function Footer({ activeHouse, onHouseButtonClick, onShowTargetsButtonClick }) {
           }
           onClick={() => {
             onHouseButtonClick("Slytherin");
+            if (showTargets) {
+              setShowTargets(!showTargets);
+            }
           }}
         >
           Allies
