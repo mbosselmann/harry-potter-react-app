@@ -68,7 +68,7 @@ function App({ data }) {
 
   return (
     <div className="App">
-      <Header activeHouse={activeHouse} />
+      <Header activeHouse={activeHouse} showTargets={showTargets} />
       <main className="main">
         {!showTargets && (
           <Title activeHouse={activeHouse} filteredData={filteredData} />
@@ -93,8 +93,11 @@ function App({ data }) {
       </main>
       <Footer
         activeHouse={activeHouse}
+        setActiveHouse={setActiveHouse}
         onHouseButtonClick={handleHouseButtonClick}
         onShowTargetsButtonClick={showTargetsClickButton}
+        showTargets={showTargets}
+        setShowTargets={setShowTargets}
       />
     </div>
   );
